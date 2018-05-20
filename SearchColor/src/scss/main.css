@@ -1,0 +1,54 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font: 1.15em "Source Sans Pro", sans-serif;
+    letter-spacing: 0.5px;
+    background: #EEEEEE;
+    color: black;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 0;
+}
+
+input {
+
+    margin-left: 50%;
+    border: solid 1px;
+    padding: 10px;
+    font-family: 'Lato', sans-serif;
+    font-size: 32px;
+    width: 40%;
+    max-width: 800px;
+}
+
+.colors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.color {
+    height: 200px;
+    margin: 0.5em;
+    padding: 0.5em;
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    flex-grow: 1;
+    transition: all 0.1s;
+    cursor: pointer;
+
+}

@@ -1,0 +1,42 @@
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Color Generator VueJs</title>
+
+
+</head>
+
+<body>
+<div class="container">
+    <div id="searchColor">
+
+        <h1>{{description}}</h1>
+        <input placeholder="Search a color, season, year, or hex code" v-model="colorSearch"/>
+
+        <div v-if="colors.length > 0">
+            <transition-group name="openUp" class="colors">
+
+                <div class="color" v-for="(color, index) in filteredColors" v-bind:key="index"
+                     v-bind:style="{ backgroundColor: color.hex }">
+
+                    <ul>
+                        <li>{{ color.hex }}</li>
+                        <li>{{ color.color }}</li>
+                        <li>{{ color.year }}</li>
+                        <li>{{ color.season }}</li>
+
+                    </ul>
+
+
+                </div>
+            </transition-group>
+
+        </div>
+    </div>
+</div>
+<script src="dist/main.js"></script>
+</body>
+</html>
